@@ -17,9 +17,9 @@ class AService {
     }
   }
 
-  Future<String> registor({String email, String password}) async {
+  Future<String> register({String email, String password}) async {
     try {
-      await _firebaseAuth.signInWithEmailAndPassword(
+      await _firebaseAuth.createUserWithEmailAndPassword(
           email: email, password: password);
       return 'Signed Up';
     } catch (e) {

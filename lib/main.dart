@@ -3,6 +3,7 @@ import 'package:flutter_news_app/screens/splashScreen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter_news_app/services/aservice.dart';
+import 'package:flutter_news_app/theme/constants.dart';
 import 'package:provider/provider.dart';
 
 void main() async {
@@ -24,9 +25,17 @@ class MyApp extends StatelessWidget {
             create: (context) => context.read<AService>().aServiceChanges),
       ],
       child: MaterialApp(
+        debugShowCheckedModeBanner: false,
         title: 'Flutter Demo',
         theme: ThemeData(
           primarySwatch: Colors.blue,
+          scaffoldBackgroundColor: kBackgroundLight,
+          appBarTheme: AppBarTheme(
+            centerTitle: true,
+            color: Colors.transparent,
+            elevation: 0,
+            iconTheme: IconThemeData(color: kIcons),
+          ),
         ),
         home: SplashScreen(),
       ),

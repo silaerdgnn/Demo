@@ -28,7 +28,10 @@ class Info extends StatelessWidget {
         decoration: InputDecoration(
           prefixIcon: prefixIcon,
           labelText: labelText,
-          labelStyle: TextStyle(color: Colors.red),
+          labelStyle: TextStyle(
+              color: kTextColorLight,
+              fontFamily: "Sarabun",
+              fontWeight: FontWeight.w300),
           border: OutlineInputBorder(
             borderRadius: BorderRadius.all(Radius.circular(20.0)),
           ),
